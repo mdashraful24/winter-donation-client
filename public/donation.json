@@ -1,0 +1,83 @@
+[
+    {
+        "id": 1,
+        "title": "Warmth for All - Dhaka",
+        "image": "https://example.com/images/campaign1.jpg",
+        "description": "Providing winter clothing to underprivileged communities in Dhaka city.",
+        "status": "Active",
+        "contactInfo": "dhaka_campaign@winterdonation.org | +880123456789",
+        "division": "Dhaka"
+    },
+    {
+        "id": 2,
+        "title": "Keep Sylhet Warm",
+        "image": "https://example.com/images/campaign2.jpg",
+        "description": "Collecting warm clothes for rural villages in Sylhet division.",
+        "status": "Active",
+        "contactInfo": "sylhet_support@winterdonation.org | +880987654321",
+        "division": "Sylhet"
+    },
+    {
+        "id": 3,
+        "title": "Chattogram Winter Aid",
+        "image": "https://example.com/images/campaign3.jpg",
+        "description": "Distributing winter clothes to coastal areas in Chattogram.",
+        "status": "Completed",
+        "contactInfo": "chattogram_aid@winterdonation.org | +880135792468",
+        "division": "Chattogram"
+    },
+    {
+        "id": 4,
+        "title": "Rajshahi Warmth Campaign",
+        "image": "https://example.com/images/campaign4.jpg",
+        "description": "Helping low-income families in Rajshahi to stay warm this winter.",
+        "status": "Active",
+        "contactInfo": "rajshahi_campaign@winterdonation.org | +880246810121",
+        "division": "Rajshahi"
+    },
+    {
+        "id": 5,
+        "title": "Khulna Care Initiative",
+        "image": "https://example.com/images/campaign5.jpg",
+        "description": "Distributing sweaters and blankets in cold-affected areas of Khulna.",
+        "status": "Ongoing",
+        "contactInfo": "khulna_help@winterdonation.org | +880123987654",
+        "division": "Khulna"
+    },
+    {
+        "id": 6,
+        "title": "Barisal Blanket Drive",
+        "image": "https://example.com/images/campaign6.jpg",
+        "description": "Providing blankets to homeless people in Barisal city.",
+        "status": "Ongoing",
+        "contactInfo": "barisal_donation@winterdonation.org | +880159753486",
+        "division": "Barisal"
+    },
+    {
+        "id": 7,
+        "title": "Mymensingh Warm Smiles",
+        "image": "https://example.com/images/campaign7.jpg",
+        "description": "Helping children in Mymensingh with warm clothes and scarves.",
+        "status": "Active",
+        "contactInfo": "mymensingh_aid@winterdonation.org | +880187654321",
+        "division": "Mymensingh"
+    },
+    {
+        "id": 8,
+        "title": "Rangpur Warmth Drive",
+        "image": "https://example.com/images/campaign8.jpg",
+        "description": "Distributing winter clothes to the poor in remote villages of Rangpur.",
+        "status": "Completed",
+        "contactInfo": "rangpur_drive@winterdonation.org | +880112233445",
+        "division": "Rangpur"
+    },
+    {
+        "id": 9,
+        "title": "Comilla Helping Hands",
+        "image": "https://example.com/images/campaign9.jpg",
+        "description": "Providing jackets and shawls to orphans in Comilla district.",
+        "status": "Active",
+        "contactInfo": "comilla_help@winterdonation.org | +880223344556",
+        "division": "Chattogram"
+    }
+]
