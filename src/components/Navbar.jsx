@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = () => {
+    const { user } = useContext(AuthContext);
 
     const links = (
         <>
@@ -12,7 +15,7 @@ const Navbar = () => {
     );
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar lg:container mx-auto font-poppins pt-5">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -43,7 +46,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-3">
-                <a className="btn">Button</a>
+                <NavLink to={"/login"} className="btn">Login</NavLink>
                 <div className="w-10">
                     <img className="rounded-full"
                         alt="login"

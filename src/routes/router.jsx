@@ -3,6 +3,8 @@ import HomeLayout from "../layouts/HomeLayout";
 import ErrorPage from "../components/ErrorPage";
 import Home from "../components/Home";
 import DonationCamp from "../components/DonationCamp";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 const router = createBrowserRouter([
     {
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
             {
                 path: "donationCamp",
                 element: <DonationCamp></DonationCamp>
+            },
+            {
+                path: "login",
+                element: <Login></Login>
+            },
+            {
+                path: "register",
+                element: <Register></Register>
             }
         ]
     },

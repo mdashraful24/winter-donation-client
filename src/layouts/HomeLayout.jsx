@@ -4,11 +4,11 @@ import Navbar from "../components/Navbar";
 
 const HomeLayout = () => {
     return (
-        <div className="lg:w-11/12 mx-auto font-poppins pt-5">
-            <Navbar></Navbar>
-            <div className=" min-h-screen">
-                <Outlet></Outlet>
-            </div>
+        <div>
+            <header className="bg-gray-50">
+                <Navbar></Navbar>
+            </header>
+            <Outlet></Outlet>
             <Footer></Footer>
         </div>
     );
