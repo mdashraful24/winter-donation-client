@@ -8,10 +8,12 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <AuthProvider>
-      <RouterProvider router={router}></RouterProvider>
-      <ToastContainer position="top-center" autoClose={1500} />
-    </AuthProvider>
-  </StrictMode>,
+  <div className="font-poppins">
+    <StrictMode>
+      <AuthProvider>
+        <RouterProvider router={router}></RouterProvider>
+        <ToastContainer position="top-center" autoClose={1500} />
+      </AuthProvider>
+    </StrictMode>,
+  </div>
 )

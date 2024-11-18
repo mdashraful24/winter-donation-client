@@ -1,57 +1,52 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
-import { auth } from "../firebase/firebase.config";
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
+import app from "../firebase/firebase.config";
 
-export const AuthContext = createContext(null);
+export const AuthContext = createContext();
+const auth = getAuth(app)
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    console.log(loading, user)
 
-    // Create User
-    const createUser = (email, password) => {
+    const createNewUser = (email, password) => {
         setLoading(true);
-        return createUserWithEmailAndPassword(auth, email, password);
+        return createUserWithEmailAndPassword(auth, email, password)
     }
 
-    // Sign In
-    const signInUser = (email, password) => {
+    const userLogin = (email, password) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
-    // Sign Out
-    const signOutUser = () => {
+    const logOut = () => {
         setLoading(true);
         return signOut(auth);
     }
 
-    // Update User
-    const updateUserProfile = (updatedData) => {
-        return updateProfile(auth.currentUser, updatedData)
+    const updateUserProfiles = (updatedData) => {
+        return updateProfile(auth.currentUser, updatedData);
     }
 
     useEffect(() => {
-        const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-            // console.log('current user', currentUser);
+        const unSubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
             setLoading(false);
         })
-
         return () => {
             unSubscribe();
         }
-
     }, [])
 
     const authInfo = {
         user,
         setUser,
-        createUser,
-        signInUser,
-        signOutUser,
-        updateUserProfile,
+        createNewUser,
+        logOut,
+        userLogin,
         loading,
+        updateUserProfiles,
     }
 
     return (

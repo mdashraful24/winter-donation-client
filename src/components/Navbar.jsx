@@ -1,14 +1,15 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
-// import userIcon from '../../src/assets/user.png';
 
 const Navbar = () => {
-    const { user, signOutUser } = useContext(AuthContext);
+
+    const { user, logOut } = useContext(AuthContext);
+
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
     const handleSignOut = () => {
-        signOutUser()
+        logOut()
             .then(() => {
                 console.log('User signed out successfully');
             })
@@ -17,33 +18,30 @@ const Navbar = () => {
 
     const toggleDropdown = () => {
         setDropdownOpen(prev => !prev);
-    };
-
+    }
     const closeDropdown = (e) => {
         if (!e.target.closest('.dropdown-container')) {
             setDropdownOpen(false);
         }
-    };
-
-    // Close the dropdown if clicking outside
+    }
     useEffect(() => {
         document.addEventListener('click', closeDropdown);
         return () => {
             document.removeEventListener('click', closeDropdown);
-        };
-    }, []);
+        }
+    }, [])
 
     const links = (
         <>
             <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/donationCamp">Donation Campaigns</NavLink></li>
-            <li><NavLink to="/howHelp">How to Help</NavLink></li>
+            <li><NavLink to="/donation">Donation Campaigns</NavLink></li>
+            <li><NavLink to="/help">How to Help</NavLink></li>
             <li><NavLink to="/dashboard">Dashboard</NavLink></li>
         </>
     );
 
     return (
-        <div className="navbar lg:container mx-auto font-poppins pt-5">
+        <div className="navbar bg-base-100">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -66,28 +64,43 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <a className="font-semibold lg:text-2xl lg:font-bold">Winter Donation</a>
+                <a className="md:text-xl lg:text-2xl font-bold">Winter Donation</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end gap-3">
+            <div className="navbar-end">
+                {/* {
+                    user && user?.email ?
+                        <div className="w-10 h-10">
+                            <img className="w-full h-full rounded-full" src={user?.photoURL} alt="" />
+                        </div> :
+                        <div>
+                            {user && user?.email ? (
+                                <button onClick={logOut} className="btn btn-neutral btn-sm rounded-none px-7">Log Out</button>
+                            ) : (
+                                <Link to="/auth/login" className="btn btn-neutral btn-sm rounded-none px-7">Login</Link>
+                            )}
+                        </div>
+                } */}
+
+
                 {user ? (
                     <div className="relative dropdown-container">
                         <img
-                            className="rounded-full w-8 h-8 cursor-pointer"
+                            className="rounded-full w-10 h-10 object-cover cursor-pointer"
                             src={user?.photoURL}
                             alt="User profile"
                             onClick={toggleDropdown}
                         />
                         {dropdownOpen && (
-                            <div className="absolute right-0 mt-2 w-40 bg-white border rounded-lg shadow-lg z-10">
-                                <ul className="py-2">
+                            <div className="absolute right-0 mt-2 w-28 bg-white border rounded-lg shadow-lg z-10">
+                                <ul className="py-">
                                     <li>
                                         <button
-                                            className="block w-full px-4 py-2 text-left hover:bg-gray-100"
+                                            className="block w-full py-2 font-bold bg-red-300 rounded-lg text-center hover:bg-gray-100"
                                             onClick={handleSignOut}
                                         >
                                             Sign Out
@@ -98,8 +111,9 @@ const Navbar = () => {
                         )}
                     </div>
                 ) : (
-                    <Link to="/login" className="btn">Login</Link>
+                    <Link to="/auth/login" className="btn">Login</Link>
                 )}
+
             </div>
         </div>
     );

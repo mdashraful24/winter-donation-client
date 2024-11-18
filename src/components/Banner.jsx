@@ -1,45 +1,71 @@
+import React from "react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 const Banner = () => {
     return (
-        <section className="mt-10">
-            <div className="carousel w-full">
-                <div id="slide1" className="carousel-item relative w-full">
+        <div className="w-full mx-auto">
+            <Carousel
+                infiniteLoop
+                useKeyboardArrows
+                autoPlay
+                showThumbs={false}
+                showStatus={false}
+                showIndicators={true}
+                dynamicHeight={false}
+                swipeable
+                emulateTouch
+                interval={3000}
+                transitionTime={500}
+                thumbWidth={80}
+                stopOnHover
+                renderArrowPrev={(clickHandler) => (
+                    <button
+                        className="absolute top-1/2 left-5 transform -translate-y-1/2 bg-black text-white p-3 rounded-full shadow-lg z-10"
+                        onClick={clickHandler}
+                    >
+                        &lt;
+                    </button>
+                )}
+                renderArrowNext={(clickHandler) => (
+                    <button
+                        className="absolute top-1/2 right-5 transform -translate-y-1/2 bg-black text-white p-3 rounded-full shadow-lg z-10"
+                        onClick={clickHandler}
+                    >
+                        &gt;
+                    </button>
+                )}
+            >
+                <div>
                     <img
-                        src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
-                        className="w-full" />
-                    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        <a href="#slide4" className="btn btn-circle">❮</a>
-                        <a href="#slide2" className="btn btn-circle">❯</a>
-                    </div>
+                        src="https://i.ibb.co.com/qNbRft4/3.jpg"
+                        alt="image 1"
+                        className="w-full h-[400px] object-cover"
+                    />
                 </div>
-                <div id="slide2" className="carousel-item relative w-full">
+                <div>
                     <img
-                        src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
-                        className="w-full" />
-                    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        <a href="#slide1" className="btn btn-circle">❮</a>
-                        <a href="#slide3" className="btn btn-circle">❯</a>
-                    </div>
+                        src="https://i.ibb.co.com/qNbRft4/3.jpg"
+                        alt="image 2"
+                        className="w-full h-[400px] object-cover"
+                    />
                 </div>
-                <div id="slide3" className="carousel-item relative w-full">
+                <div>
                     <img
-                        src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-                        className="w-full" />
-                    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        <a href="#slide2" className="btn btn-circle">❮</a>
-                        <a href="#slide4" className="btn btn-circle">❯</a>
-                    </div>
+                        src="https://i.ibb.co.com/qNbRft4/3.jpg"
+                        alt="image 3"
+                        className="w-full h-[400px] object-cover"
+                    />
                 </div>
-                <div id="slide4" className="carousel-item relative w-full">
+                <div>
                     <img
-                        src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
-                        className="w-full" />
-                    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                        <a href="#slide3" className="btn btn-circle">❮</a>
-                        <a href="#slide1" className="btn btn-circle">❯</a>
-                    </div>
+                        src="https://i.ibb.co.com/qNbRft4/3.jpg"
+                        alt="image 4"
+                        className="w-full h-[400px] object-cover"
+                    />
                 </div>
-            </div>
-        </section>
+            </Carousel>
+        </div>
     );
 };
 
