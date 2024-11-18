@@ -1,16 +1,44 @@
-import { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { useContext, useState, useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+// import userIcon from '../../src/assets/user.png';
 
 const Navbar = () => {
-    const { user } = useContext(AuthContext);
+    const { user, signOutUser } = useContext(AuthContext);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    const handleSignOut = () => {
+        signOutUser()
+            .then(() => {
+                console.log('User signed out successfully');
+            })
+            .catch(error => console.log('ERROR', error.message));
+    };
+
+    const toggleDropdown = () => {
+        setDropdownOpen(prev => !prev);
+    };
+
+    const closeDropdown = (e) => {
+        if (!e.target.closest('.dropdown-container')) {
+            setDropdownOpen(false);
+        }
+    };
+
+    // Close the dropdown if clicking outside
+    useEffect(() => {
+        document.addEventListener('click', closeDropdown);
+        return () => {
+            document.removeEventListener('click', closeDropdown);
+        };
+    }, []);
 
     const links = (
         <>
-            <li><NavLink to={"/"}>Home</NavLink></li>
-            <li><NavLink to={"/donationCamp"}>Donation Campaigns</NavLink></li>
-            <li><NavLink to={"/howHelp"}>How to Help</NavLink></li>
-            <li><NavLink to={"/dashboard"}>Dashboard</NavLink></li>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/donationCamp">Donation Campaigns</NavLink></li>
+            <li><NavLink to="/howHelp">How to Help</NavLink></li>
+            <li><NavLink to="/dashboard">Dashboard</NavLink></li>
         </>
     );
 
@@ -46,12 +74,32 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-3">
-                <NavLink to={"/login"} className="btn">Login</NavLink>
-                <div className="w-10">
-                    <img className="rounded-full"
-                        alt="login"
-                        src="" />
-                </div>
+                {user ? (
+                    <div className="relative dropdown-container">
+                        <img
+                            className="rounded-full w-8 h-8 cursor-pointer"
+                            src={user?.photoURL}
+                            alt="User profile"
+                            onClick={toggleDropdown}
+                        />
+                        {dropdownOpen && (
+                            <div className="absolute right-0 mt-2 w-40 bg-white border rounded-lg shadow-lg z-10">
+                                <ul className="py-2">
+                                    <li>
+                                        <button
+                                            className="block w-full px-4 py-2 text-left hover:bg-gray-100"
+                                            onClick={handleSignOut}
+                                        >
+                                            Sign Out
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        )}
+                    </div>
+                ) : (
+                    <Link to="/login" className="btn">Login</Link>
+                )}
             </div>
         </div>
     );

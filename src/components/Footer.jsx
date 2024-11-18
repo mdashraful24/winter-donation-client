@@ -9,7 +9,7 @@ const Footer = () => {
                 <div>
                     <h2 className="footer-title">Contact Information</h2>
                     <p className="text-sm">
-                        Email: contact@yourwebsite.com
+                        Email: contact@winterdonation.com
                         <br />
                         Phone: +123 456 7890
                         <br />
@@ -40,7 +40,7 @@ const Footer = () => {
                 <div>
                     <h2 className="footer-title">Legal</h2>
                     <p className="text-sm">
-                        &copy; {new Date().getFullYear()} YourWebsite. All rights reserved.
+                        &copy; {new Date().getFullYear()} Winter Donation. All rights reserved.
                     </p>
                 </div>
             </div>

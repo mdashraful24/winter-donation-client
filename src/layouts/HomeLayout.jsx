@@ -9,7 +9,9 @@ const HomeLayout = () => {
                 <Navbar></Navbar>
             </header>
             <Outlet></Outlet>
-            <Footer></Footer>
+            <footer className="bg-gray-200">
+                <Footer></Footer>
+            </footer>
         </div>
     );
 };
