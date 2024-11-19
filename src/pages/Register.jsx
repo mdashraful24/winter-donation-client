@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Register = () => {
 
@@ -16,16 +17,25 @@ const Register = () => {
         const email = form.get("email");
         const photo = form.get("photo");
         const password = form.get("password");
-        console.log({ name, email, photo, password });
+        // console.log({ name, email, photo, password });
 
         // Password validation criteria
-        if (!/[A-Z]/.test(password) || !/[a-z]/.test(password) || password.length < 6) {
-            setError(
-                "Password must contain at least one uppercase letter, one lowercase letter, and be at least 6 characters long."
-            );
+
+        if (!/[A-Z]/.test(password)) {
+            setError("Password must contain at least one uppercase letter.");
+            // toast.error("Password must contain at least one uppercase letter.");
             return;
         }
-
+        if (!/[a-z]/.test(password)) {
+            setError("Password must contain at least one lowercase letter.");
+            // toast.error("Password must contain at least one lowercase letter.");
+            return;
+        }
+        if (password.length < 6) {
+            setError("Password must be at least 6 characters long.");
+            // toast.error("Password must be at least 6 characters long.");
+            return;
+        }
         setError("");
 
         createNewUser(email, password)
@@ -39,12 +49,13 @@ const Register = () => {
                     .then(() => {
                         navigate("/");
                     })
-                    .catch(err => {
-                        console.log(err);
+                    .catch((err) => {
+                        toast.error(err.message || "Please try again.");
                     })
             })
-            .catch(error => {
-                console.log('ERROR', error.message);
+            .catch((error) => {
+                // toast.error(error.message || "Please try again.");
+                toast.error(error.message, "Please try again.");
             })
     }
 

@@ -1,9 +1,11 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
 const CampaignCard = ({ donation }) => {
 
     const { id, image, title, description, division } = donation;
-
+    // const { setId } = useContext(AuthContext);
     return (
         <div className="card bg-base-100 shadow-md p-4 rounded-md">
             <figure className="mb-4">
@@ -14,7 +16,7 @@ const CampaignCard = ({ donation }) => {
                 <p className="text-gray-600">{description}</p>
                 <p>{division}</p>
                 <div className="mt-4">
-                    <Link to={`/donation/camp/details/${id}`}
+                    <Link to={`/donation/camp/${id}`}
                         className="btn btn-outline btn-primary">
                         Donate Now
                     </Link>

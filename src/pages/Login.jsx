@@ -2,27 +2,44 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { toast } from "react-toastify";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
-    const { userLogin, setUser } = useContext(AuthContext);
+    const { userLogin, setUser, handleGoogleSignIn } = useContext(AuthContext);
     const [error, setError] = useState({});
     const [showPassWord, setShowPassword] = useState(false);
 
     const navigate = useNavigate();
     const location = useLocation();
-    console.log(location)
+    // console.log(location)
+
+    const handleGoogleSignInClick = () => {
+        handleGoogleSignIn()
+            .then(result => {
+                const user = result.user;
+                setUser(user);  // Store the authenticated user
+                toast.success("Successfully! Login with Google");
+                navigate(location?.state ? location.state : "/");  // Redirect to the previous or home page
+            })
+            .catch(error => {
+                // console.log("ERROR", error);
+                setError({ ...error, google: error.message });
+            });
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log({ email, password });
+        // console.log({ email, password });
 
         userLogin(email, password)
             .then(result => {
                 const user = result.user;
                 setUser(user);
+                toast.success("Login Successfully!");
                 navigate(location?.state ? location.state : "/");
             })
             .catch(err => {
@@ -57,8 +74,8 @@ const Login = () => {
                                 className="input input-bordered"
                                 required
                             />
-                            <button onClick={() => setShowPassword(!showPassWord)}
-                                className=" absolute right-4 top-[52px]">
+                            <button type="button" onClick={() => setShowPassword(!showPassWord)}
+                                className="absolute right-4 top-[52px]">
                                 {
                                     showPassWord ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
                                 }
@@ -82,6 +99,15 @@ const Login = () => {
                     <p className='text-center font-semibold'>
                         Don't Have An Account? <Link to='/auth/register' className='text-red-500'>Register</Link>
                     </p>
+                    {/* Google Login Button */}
+                    <div className="text-center lg:w-10/12 mx-auto mt-4">
+                        <button onClick={handleGoogleSignInClick}
+                            className="btn btn-neutral rounded-none w-full"
+                        >
+                            <FcGoogle />
+                            Login with Google
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

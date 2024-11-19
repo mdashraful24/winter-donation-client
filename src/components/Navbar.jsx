@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { toast } from "react-toastify";
+// import logo from '../../src/assets/winter-clothes-donationvector.png'
 
 const Navbar = () => {
 
@@ -11,9 +13,11 @@ const Navbar = () => {
     const handleSignOut = () => {
         logOut()
             .then(() => {
-                console.log('User signed out successfully');
+                toast.success("User signed out successfully");
             })
-            .catch(error => console.log('ERROR', error.message));
+            .catch((error) => {
+                toast.error(error.message);
+            })
     };
 
     const toggleDropdown = () => {
@@ -65,6 +69,9 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <a className="md:text-xl lg:text-2xl font-bold">Winter Donation</a>
+                {/* <div className="w-20 h-20 rounded-full">
+                    <img className="w-full h-full" src={logo} alt="" />
+                </div> */}
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

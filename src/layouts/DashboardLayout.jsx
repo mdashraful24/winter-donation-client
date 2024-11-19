@@ -1,16 +1,16 @@
-import Footer from "../components/Footer";
-import Home from "../components/Home";
+import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
-const HomeLayout = () => {
+const DashboardLayout = () => {
     return (
         <div>
             <nav className="container mx-auto py-6">
                 <Navbar></Navbar>
             </nav>
-            <main>
-                <Home></Home>
-            </main>
+            <section className="container mx-auto">
+                <Outlet></Outlet>
+            </section>
             <footer>
                 <Footer></Footer>
             </footer>
@@ -18,4 +18,4 @@ const HomeLayout = () => {
     );
 };
 
-export default HomeLayout;
+export default DashboardLayout;
