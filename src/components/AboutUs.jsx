@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from '../../src/assets/banner1.jpeg'
+import logo from '../../src/assets/winter-clothes-donationvector.png'
 
 const AboutUs = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -7,114 +7,42 @@ const AboutUs = () => {
     return (
         <div>
             {/* About Section */}
-            {/* <section className="bg-gray-100 py-16">
-                <div className="container mx-auto px-4 lg:px-20">
-                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-primary">About Us</h2>
-                    <div className="card bg-white shadow-lg p-8 rounded-lg">
-                        <h3 className="text-2xl font-semibold text-secondary mb-4 text-center">
-                            Welcome to Winter Clothing Donation!
-                        </h3>
-                        <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                            We are a community-driven initiative dedicated to spreading warmth and comfort during the coldest
-                            months of the year. Our mission is to connect generous donors with individuals and families in need
-                            of winter clothing, ensuring no one faces the harsh winter without proper protection.
-                        </p>
-                        <h4 className="text-xl font-semibold text-accent mb-4">What We Do</h4>
-                        <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                            <li>
-                                <span className="font-medium text-gray-800">Collect Donations:</span> Accepting winter clothing like
-                                coats, hats, gloves, scarves, and blankets in good condition.
-                            </li>
-                            <li>
-                                <span className="font-medium text-gray-800">Distribute to Those in Need:</span> Partnering with shelters,
-                                schools, and local organizations to distribute donations efficiently.
-                            </li>
-                            <li>
-                                <span className="font-medium text-gray-800">Raise Awareness:</span> Highlighting the importance of
-                                sharing and caring during the winter season.
-                            </li>
-                        </ul>
-                        <h4 className="text-xl font-semibold text-accent mt-6 mb-4">Why It Matters</h4>
-                        <p className="text-gray-600 leading-relaxed">
-                            Winter can be especially tough for vulnerable communities. With your help, we can make a difference and
-                            provide warmth, dignity, and hope to those who need it most.
-                        </p>
-                    </div>
-                </div>
-            </section> */}
-
-            {/* <section className="bg-gray-100 py-16">
-                <div className="container mx-auto px-4 lg:px-20 flex flex-col lg:flex-row items-center gap-10">
-                    Text Section
-                    <div className="lg:w-1/2">
-                        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                            About Us
-                        </h2>
-                        <h3 className="text-2xl font-semibold text-secondary mb-4">
-                            Welcome to Winter Clothing Donation!
-                        </h3>
-                        <p className="text-gray-600 text-lg leading-relaxed mb-4">
-                            We are a community-driven initiative dedicated to spreading warmth and comfort during the coldest
-                            months of the year. Our mission is to connect generous donors with individuals and families in need
-                            of winter clothing, ensuring no one faces the harsh winter without proper protection.
-                        </p>
-                        <h4 className="text-xl font-semibold text-accent mb-2">
-                            Why It Matters
-                        </h4>
-                        <p className="text-gray-600 leading-relaxed mb-4">
-                            Winter can be especially tough for vulnerable communities. With your help, we can make a difference and
-                            provide warmth, dignity, and hope to those who need it most.
-                        </p>
-                        <button className="btn btn-primary rounded-lg mt-4">Learn More</button>
-                    </div>
-
-                    Image Section
-                    <div className="lg:w-1/2">
-                        <img
-                            src={logo}
-                            alt="Winter Donation"
-                            className="rounded-lg shadow-lg w-full h-auto object-cover"
-                        />
-                    </div>
-                </div>
-            </section> */}
-
-            <section className="bg-gray-100 py-16">
-                <div className="container mx-auto px-4 lg:px-20 flex flex-col lg:flex-row items-center gap-10">
+            <section className="mb-28 bg-slate-100 py-20">
+                <div className="container mx-auto flex flex-col lg:flex-row items-center gap-16 rounded-lg px-5">
                     {/* Text Section */}
                     <div className="lg:w-1/2">
-                        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+                        <h2 className="text-3xl md:text-4xl text-[#491558] font-bold text- mb-6">
                             About Us
                         </h2>
-                        <h3 className="text-2xl font-semibold text-secondary mb-4">
-                            Welcome to Winter Clothing Donation!
-                        </h3>
                         <p className="text-gray-600 text-lg text-justify leading-relaxed mb-4">
-                            We are a community-driven initiative dedicated to spreading warmth and comfort during the coldest
-                            months of the year. Our mission is to connect generous donors with individuals and families in need
-                            of winter clothing, ensuring no one faces the harsh winter without proper protection.
+                            We are a community-driven initiative dedicated to spreading warmth and comfort during the coldest months of the year. Our mission is to connect generous donors with individuals and families in need of winter clothing, ensuring that no one has to face the harsh winter without proper protection. Through your donations of gently used winter clothing, we strive to make a meaningful difference in the lives of those who need it most, fostering a sense of community and compassion.
                         </p>
-                        <h4 className="text-xl font-semibold text-accent mb-2">
-                            Why It Matters
-                        </h4>
-                        <p className="text-gray-600 leading-relaxed mb-4">
-                            Winter can be especially tough for vulnerable communities. With your help, we can make a difference and
-                            provide warmth, dignity, and hope to those who need it most.
-                        </p>
+                        <div class="text-lg">
+                            <p class="mb-4 font-medium">Why It Matters:</p>
+                            <ul class="list-disc text-gray-600 pl-6 space-y-1">
+                                <li>Protects against cold-related illnesses.</li>
+                                <li>Provides warmth, dignity, and comfort.</li>
+                                <li>Helps vulnerable communities stay safe.</li>
+                                <li>Ensures no one faces winter without protection.</li>
+                            </ul>
+                        </div>
                         <button
-                            className="btn btn-primary rounded-lg mt-4"
+                            className="py-2 px-6 text-white font-semibold rounded-md mt-4"
                             onClick={() => setIsModalOpen(true)}
+                            style={{
+                                backgroundColor: '#6b2f7b',
+                                borderColor: '#6b2f7b',
+                            }}
                         >
-                            Learn More
+                            Read More
                         </button>
                     </div>
 
-                    {/* Image Section */}
                     <div className="lg:w-1/2">
                         <img
                             src={logo}
                             alt="Winter Donation"
-                            className="rounded-lg shadow-lg w-full h-auto lg:h-[500px] object-cover"
+                            className="rounded-lg shadow-md w-full h-auto lg:h-[520px] object-cover"
                         />
                     </div>
                 </div>

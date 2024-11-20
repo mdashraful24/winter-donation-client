@@ -25,6 +25,7 @@ const Login = () => {
             .catch(error => {
                 // console.log("ERROR", error);
                 setError({ ...error, google: error.message });
+                toast.error("Google Sign-In Failed. Please try again.");
             });
     }
 
@@ -44,14 +45,15 @@ const Login = () => {
             })
             .catch(err => {
                 setError({ ...error, login: err.code });
+                toast.error("Login failed. Please check your credentials.");
             })
     }
 
     return (
-        <div className='lg:h-[580px]'>
-            <div className="flex justify-center items-center mt-16">
-                <div className="card bg-gray-100 w-full max-w-lg shrink-0 rounded-none p-10">
-                    <h2 className='text-2xl font-semibold text-center'>Login your account</h2>
+        <div className='my-10 px-5'>
+            <div className="flex justify-center items-center">
+                <div className="card bg-white rounded-xl border w-full max-w-lg shrink-0 py-6 md:p-10">
+                    <h2 className='text-2xl font-semibold text-center'>Login Now</h2>
                     <form onSubmit={handleSubmit} className="card-body">
                         <div className="form-control">
                             <label className="label">
@@ -61,7 +63,8 @@ const Login = () => {
                                 type="email"
                                 name="email"
                                 placeholder="email"
-                                className="input input-bordered" required />
+                                className="input input-bordered border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                                required />
                         </div>
                         <div className="form-control relative">
                             <label className="label">
@@ -71,7 +74,7 @@ const Login = () => {
                                 type={showPassWord ? 'text' : 'password'}
                                 name="password"
                                 placeholder="password"
-                                className="input input-bordered"
+                                className="input input-bordered border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 required
                             />
                             <button type="button" onClick={() => setShowPassword(!showPassWord)}
@@ -80,36 +83,41 @@ const Login = () => {
                                     showPassWord ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
                                 }
                             </button>
-                            {
+                            {/* {
                                 error.login && (
                                     <label className="label text-sm text-red-600">
                                         {error.login}
                                     </label>
                                 )
-                            }
+                            } */}
                             <label className="label">
-                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                <Link
+                                    to={`/auth/forgot-password?email=${document.querySelector("[name='email']")?.value || ""}`}
+                                    className="label-text-alt text-sm link link-hover text-blue-600"
+                                >
+                                    Forgot password?
+                                </Link>
                             </label>
                         </div>
-                        {/* {error && <p className="text-red-500 text-center">{error}</p>} */}
-                        <div className="form-control mt-6">
-                            <button className="btn btn-neutral rounded-none">Login</button>
+                        <div className="form-control mt-2 -mb-2">
+                            <button className="btn text-white font-medium bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-md transition-all duration-200 border-none">Login</button>
                         </div>
                     </form>
-                    <p className='text-center font-semibold'>
-                        Don't Have An Account? <Link to='/auth/register' className='text-red-500'>Register</Link>
+                    <p className='text-center text-sm'>
+                        Don't Have An Account? <Link to='/auth/register' className='text-red-500 font-semibold'>Register</Link>
                     </p>
-                    {/* Google Login Button */}
-                    <div className="text-center lg:w-10/12 mx-auto mt-4">
+                    <div className="text-center w-10/12 mx-auto mt-5">
                         <button onClick={handleGoogleSignInClick}
-                            className="btn btn-neutral rounded-none w-full"
+                            className="btn w-full text-white font-medium bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 focus:outline-none focus:ring-2 focus:ring-red-400 shadow-md transition-all duration-200 border-none"
                         >
                             <FcGoogle />
-                            Login with Google
+                            Sign in with Google
                         </button>
                     </div>
                 </div>
             </div>
+            
+            
         </div>
     );
 };

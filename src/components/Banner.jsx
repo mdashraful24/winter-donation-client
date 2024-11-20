@@ -75,11 +75,13 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import logo from '../../src/assets/banner1.jpeg'
+import first from '../../src/assets/banner1.jpeg'
+import second from '../../src/assets/banner2.jpg'
+import third from '../../src/assets/banner3.jpg'
 
 const Banner = () => {
     return (
-        <div className="lg:w-8/12 lg:mx-auto">
+        <div className="container mx-auto mt-16 px-5">
             <Carousel
                 infiniteLoop
                 useKeyboardArrows
@@ -112,23 +114,23 @@ const Banner = () => {
             >
                 <div>
                     <img
-                        src={logo}
+                        src={first}
                         alt="Banner 1"
-                        className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
+                        className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-lg object-cover"
                     />
                 </div>
                 <div>
                     <img
-                        src={logo}
+                        src={second}
                         alt="Banner 2"
-                        className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
+                        className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-lg object-cover"
                     />
                 </div>
                 <div>
                     <img
-                        src={logo}
+                        src={third}
                         alt="Banner 3"
-                        className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
+                        className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-lg object-cover"
                     />
                 </div>
             </Carousel>

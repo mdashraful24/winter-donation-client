@@ -1,45 +1,53 @@
+import review from '../../src/assets/winter-clothes-donationvector.png'
+
 const ExtraSecOne = () => {
     return (
         <div>
-            <section className="bg-gray-100 py-12">
-                <div className="w-10/12 mx-auto text-center">
-                    <h2 className="text-2xl md:text-3xl font-bold mb-8 text-gray-800">What People Are Saying</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {/* Testimonial 1 */}
-                        <div className="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition duration-300">
-                            <img
-                                src="https://via.placeholder.com/150"
-                                alt="Beneficiary"
-                                className="w-16 h-16 mx-auto rounded-full mb-4"
-                            />
-                            <p className="text-gray-600">"This initiative changed our winter experience. Thank you for your support!"</p>
-                            <span className="block mt-4 font-semibold text-gray-800">- A Beneficiary</span>
+            <div class="bg-gray-100 py-16 px-5 mb-24">
+                <h2 class="text-3xl md:text-4xl text-center text-[#6b2c83] font-bold mb-6 md:mb-14 lg:mb-14">What People Are Saying</h2>
+                <div class="max-w-4xl mx-auto grid gap-6 lg:grid-cols-2">
+                    {/* <!-- Testimonial 1 --> */}
+                    <div class="bg-white p-6 shadow-md hover:shadow-xl rounded-lg">
+                        <img class="w-12 h-12 rounded-full mr-4 mb-2" src={review} alt="Maria's picture"></img>
+                        <p class="text-gray-700 italic">
+                            "Thanks to this initiative, my family received warm coats just in time for winter. It has been a lifesaver for us."
+                        </p>
+                        <div class="mt-4 text-right">
+                            <span class="font-semibold text-gray-800">– Maria, Mother of Three</span>
                         </div>
-
-                        {/* Testimonial 2 */}
-                        <div className="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition duration-300">
-                            <img
-                                src="https://via.placeholder.com/150"
-                                alt="Donor"
-                                className="w-16 h-16 mx-auto rounded-full mb-4"
-                            />
-                            <p className="text-gray-600">"Donating my old clothes was super easy. I love the mission!"</p>
-                            <span className="block mt-4 font-semibold text-gray-800">- A Donor</span>
+                    </div>
+                    {/* <!-- Testimonial 2 --> */}
+                    <div class="bg-white p-6 shadow-md hover:shadow-xl rounded-lg">
+                        <img class="w-12 h-12 rounded-full mr-4 mb-2" src={review} alt="Maria's picture"></img>
+                        <p class="text-gray-700 italic">
+                            "The jacket I received has made such a difference in my daily life. I’m so grateful for the support."
+                        </p>
+                        <div class="mt-4 text-right">
+                            <span class="font-semibold text-gray-800">– John, Community Member</span>
                         </div>
-
-                        {/* Testimonial 3 */}
-                        <div className="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition duration-300">
-                            <img
-                                src="https://via.placeholder.com/150"
-                                alt="Volunteer"
-                                className="w-16 h-16 mx-auto rounded-full mb-4"
-                            />
-                            <p className="text-gray-600">"The team is doing an amazing job ensuring no one suffers this winter."</p>
-                            <span className="block mt-4 font-semibold text-gray-800">- A Volunteer</span>
+                    </div>
+                    {/* <!-- Testimonial 3 --> */}
+                    <div class="bg-white p-6 shadow-md hover:shadow-xl rounded-lg">
+                        <img class="w-12 h-12 rounded-full mr-4 mb-2" src={review} alt="Maria's picture"></img>
+                        <p class="text-gray-700 italic">
+                            "This program brought warmth to our lives, not just physically but emotionally too. Thank you!"
+                        </p>
+                        <div class="mt-4 text-right">
+                            <span class="font-semibold text-gray-800">– Sarah, Single Parent</span>
+                        </div>
+                    </div>
+                    {/* <!-- Testimonial 4 --> */}
+                    <div class="bg-white p-6 shadow-md hover:shadow-xl rounded-lg">
+                        <img class="w-12 h-12 rounded-full mr-4 mb-2" src={review} alt="Maria's picture"></img>
+                        <p class="text-gray-700 italic">
+                            "Knowing someone cares made all the difference. My children now have boots to walk to school in the snow."
+                        </p>
+                        <div class="mt-4 text-right">
+                            <span class="font-semibold text-gray-800">– Ahmed, Father of Two</span>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
 
         </div>
     );

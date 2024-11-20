@@ -1,33 +1,57 @@
+import { FaHandHoldingHeart, FaPeopleArrows, FaSnowflake } from "react-icons/fa";
+
 const ExtraSecTwo = () => {
     return (
         <div>
-            <section className="py-12 bg-gray-50">
-                <div className="w-10/12 mx-auto">
-                    <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">How You Can Support</h2>
-                    <div className="mt-12 text-center">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                            {/* Volunteer Section */}
-                            <div className="p-6 bg-green-100 rounded-lg shadow-md">
-                                <h4 className="font-semibold text-xl text-gray-800 mb-2">Volunteer with Us</h4>
-                                <p className="text-gray-600">Your time can make a huge difference. Volunteer to help us organize, collect, or distribute donations. Your effort will directly impact the lives of others.</p>
-                                <a href="#" className="mt-4 inline-block text-blue-600 font-semibold">Learn More</a>
-                            </div>
-
-                            {/* FAQ Section */}
-                            <div className="p-6 bg-yellow-100 rounded-lg shadow-md">
-                                <h4 className="font-semibold text-xl text-gray-800 mb-2">Frequently Asked Questions</h4>
-                                <p className="text-gray-600">Find answers to common questions about the donation process, collection points, and how you can get involved. We're here to assist you every step of the way.</p>
-                                <a href="#" className="mt-4 inline-block text-blue-600 font-semibold">Read FAQs</a>
-                            </div>
+            <div class="px-5 mb-28">
+                <div class="max-w-5xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl text-center text-[#6b2c83] font-bold mb-6 md:mb-10">Our Mission</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        At <span class="font-semibold text-blue-800">Winter Clothing Donation</span>, our mission is to bring warmth, dignity,
+                        and hope to individuals and families facing harsh winters without proper clothing. We strive to create a
+                        compassionate community where everyone plays a role in spreading kindness and ensuring no one is left out in the cold.
+                    </p>
+                </div>
+                <div class="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
+                    {/* <!-- Goal 1 --> */}
+                    <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                        <div class="text-center">
+                            <span class="inline-block text-4xl text-[#6b2c83] mb-4">
+                                <FaHandHoldingHeart />
+                            </span>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Empower Communities</h3>
+                            <p class="text-gray-700">
+                                Mobilizing individuals to make a difference by donating, volunteering, and supporting those in need.
+                            </p>
                         </div>
                     </div>
-
-                    <div className="mt-12 text-center">
-                        <h3 className="text-2xl font-bold text-gray-800 mb-4">Get In Touch</h3>
-                        <p className="text-gray-600">Have any questions? Feel free to contact us via email, phone, or visit one of our offices. We're here to help!</p>
+                    {/* <!-- Goal 2 --> */}
+                    <div class="bg-amber-50 p-6 rounded-lg shadow-md">
+                        <div class="text-center">
+                            <span class="inline-block text-4xl text-[#6b2c83] mb-4">
+                                <FaPeopleArrows />
+                            </span>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Bridge the Gap</h3>
+                            <p class="text-gray-700">
+                                Connecting generous donors with underserved individuals to ensure no one faces winter unprepared.
+                            </p>
+                        </div>
+                    </div>
+                    {/* <!-- Goal 3 --> */}
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                        <div class="text-center">
+                            <span class="inline-block text-4xl text-[#6b2c83] mb-4">
+                                <FaSnowflake />
+                            </span>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-3">Spread Warmth</h3>
+                            <p class="text-gray-700">
+                                Providing winter essentials to promote health, safety, and comfort for vulnerable populations.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
+
 
         </div>
     );

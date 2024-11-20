@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 const HomeLayout = () => {
     return (
         <div>
-            <nav className="container mx-auto py-6">
+            <nav className="">
                 <Navbar></Navbar>
             </nav>
             <main>

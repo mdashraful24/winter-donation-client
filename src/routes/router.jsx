@@ -12,6 +12,7 @@ import HelpLayout from "../layouts/HelpLayout";
 import Dashboard from "../components/Dashboard";
 import UpdateProfile from "../pages/UpdateProfile";
 import DashboardLayout from "../layouts/DashboardLayout";
+import ForgotPassWord from "../pages/ForgotPassWord";
 // import json from "../../public/donation.json"
 
 const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
             {
                 path: '/auth/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/auth/forgot-password',
+                element: <ForgotPassWord></ForgotPassWord>
             }
         ]
     },
@@ -75,11 +80,13 @@ const router = createBrowserRouter([
                 path: '/dashboard',
                 element: <Dashboard></Dashboard>
             },
-            {
-                path: '/dashboard/update-profile',
-                element: <UpdateProfile></UpdateProfile>
-            }
         ]
+    },
+    {
+        path: 'update-profile',
+        element: <PrivateRoute>
+            <UpdateProfile></UpdateProfile>
+        </PrivateRoute>
     },
     // {
     //     path: 'update-profile',

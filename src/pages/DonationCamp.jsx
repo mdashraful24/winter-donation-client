@@ -14,13 +14,13 @@ const DonationCamp = () => {
     }, [])
 
     return (
-        <div>
-            <nav className="container mx-auto py-6">
-                <Navbar></Navbar>
-            </nav>
-            <div className="container mx-auto my-10">
-                <h2 className="text-center">Donation Campaign</h2>
-                <div className="container mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="bg-gray-50">
+            <Navbar></Navbar>
+            <div className="container mx-auto mt-14 mb-28 px-5">
+                <h2 className="text-4xl text-center md:text-5xl text-[#491558] font-bold mb-14">
+                    Donation Campaign
+                </h2>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
                     {
                         donations.map(donation =>
                             <CampaignCard

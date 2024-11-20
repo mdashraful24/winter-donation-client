@@ -8,7 +8,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 createRoot(document.getElementById('root')).render(
-  <div className="font-poppins">
+  <div className="font-poppins bg-white">
     <StrictMode>
       <AuthProvider>
         <RouterProvider router={router}></RouterProvider>

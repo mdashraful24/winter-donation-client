@@ -4,11 +4,11 @@ import Footer from "../components/Footer";
 
 const DashboardLayout = () => {
     return (
-        <div>
-            <nav className="container mx-auto py-6">
+        <div className="bg-gray-100">
+            <nav>
                 <Navbar></Navbar>
             </nav>
-            <section className="container mx-auto">
+            <section>
                 <Outlet></Outlet>
             </section>
             <footer>

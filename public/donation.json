@@ -1,83 +1,83 @@
 [
     {
         "id": 1,
-        "title": "Warmth for All - Dhaka",
+        "title": "Warmth for Winter",
         "image": "https://i.ibb.co.com/jbJcv2P/warm-for-dhaka.jpg",
-        "description": "Providing winter clothing to underprivileged communities in Dhaka city.",
+        "description": "Providing blankets and warm clothes for those in need in the Dhaka division.",
         "status": "Active",
-        "contactInfo": "dhaka_campaign@winterdonation.org | +880123456789",
+        "contactInfo": "winter.dhaka@example.com",
         "division": "Dhaka"
     },
     {
         "id": 2,
-        "title": "Keep Sylhet Warm",
-        "image": "https://i.ibb.co.com/3fWMY00/pexels-photo-11319521.jpg",
-        "description": "Collecting warm clothes for rural villages in Sylhet division.",
+        "title": "Cozy Nights Campaign",
+        "image": "https://example.com/images/cozy-nights.jpg",
+        "description": "Distributing winter jackets and thermal wear to underprivileged communities in Chattogram.",
         "status": "Active",
-        "contactInfo": "sylhet_support@winterdonation.org | +880987654321",
-        "division": "Sylhet"
-    },
-    {
-        "id": 3,
-        "title": "Chattogram Winter Aid",
-        "image": "https://i.ibb.co.com/jbJcv2P/warm-for-dhaka.jpg",
-        "description": "Distributing winter clothes to coastal areas in Chattogram.",
-        "status": "Completed",
-        "contactInfo": "chattogram_aid@winterdonation.org | +880135792468",
+        "contactInfo": "winter.chattogram@example.com",
         "division": "Chattogram"
     },
     {
+        "id": 3,
+        "title": "Warm Smiles Drive",
+        "image": "https://example.com/images/warm-smiles.jpg",
+        "description": "Helping children with winter clothing in the Sylhet division.",
+        "status": "Upcoming",
+        "contactInfo": "warm.smiles.sylhet@example.com",
+        "division": "Sylhet"
+    },
+    {
         "id": 4,
-        "title": "Rajshahi Warmth Campaign",
-        "image": "https://i.ibb.co.com/jbJcv2P/warm-for-dhaka.jpg",
-        "description": "Helping low-income families in Rajshahi to stay warm this winter.",
-        "status": "Active",
-        "contactInfo": "rajshahi_campaign@winterdonation.org | +880246810121",
+        "title": "Blankets for Everyone",
+        "image": "https://example.com/images/blankets-for-everyone.jpg",
+        "description": "Donating blankets and socks in the Rajshahi division to combat winter.",
+        "status": "Upcoming",
+        "contactInfo": "blankets.rajshahi@example.com",
         "division": "Rajshahi"
     },
     {
         "id": 5,
-        "title": "Khulna Care Initiative",
-        "image": "https://i.ibb.co.com/jbJcv2P/warm-for-dhaka.jpg",
-        "description": "Distributing sweaters and blankets in cold-affected areas of Khulna.",
-        "status": "Ongoing",
-        "contactInfo": "khulna_help@winterdonation.org | +880123987654",
-        "division": "Khulna"
+        "title": "Shelter and Support",
+        "image": "https://example.com/images/shelter-support.jpg",
+        "description": "Winter essentials drive for flood-affected areas in the Barishal division.",
+        "status": "Complete",
+        "contactInfo": "support.barishal@example.com",
+        "division": "Barishal"
     },
     {
         "id": 6,
-        "title": "Barisal Blanket Drive",
-        "image": "https://i.ibb.co.com/jbJcv2P/warm-for-dhaka.jpg",
-        "description": "Providing blankets to homeless people in Barisal city.",
-        "status": "Ongoing",
-        "contactInfo": "barisal_donation@winterdonation.org | +880159753486",
-        "division": "Barisal"
+        "title": "Winter Essentials Outreach",
+        "image": "https://example.com/images/winter-essentials.jpg",
+        "description": "Providing gloves and caps to vulnerable families in the Khulna division.",
+        "status": "Complete",
+        "contactInfo": "essentials.khulna@example.com",
+        "division": "Khulna"
     },
     {
         "id": 7,
-        "title": "Mymensingh Warm Smiles",
-        "image": "https://i.ibb.co.com/jbJcv2P/warm-for-dhaka.jpg",
-        "description": "Helping children in Mymensingh with warm clothes and scarves.",
+        "title": "Care for the Cold",
+        "image": "https://example.com/images/care-for-cold.jpg",
+        "description": "Winter aid for remote areas of the Mymensingh division.",
         "status": "Active",
-        "contactInfo": "mymensingh_aid@winterdonation.org | +880187654321",
+        "contactInfo": "care.mymensingh@example.com",
         "division": "Mymensingh"
     },
     {
         "id": 8,
-        "title": "Rangpur Warmth Drive",
-        "image": "https://i.ibb.co.com/jbJcv2P/warm-for-dhaka.jpg",
-        "description": "Distributing winter clothes to the poor in remote villages of Rangpur.",
-        "status": "Completed",
-        "contactInfo": "rangpur_drive@winterdonation.org | +880112233445",
-        "division": "Rangpur"
+        "title": "Together Against Winter",
+        "image": "https://example.com/images/together-winter.jpg",
+        "description": "Distributing heating pads and thermal clothing in Rangpur.",
+        "status": "Complete",
+        "contactInfo": "together.rangpur@example.com",
+        "division": "Bandarban"
     },
     {
         "id": 9,
-        "title": "Comilla Helping Hands",
-        "image": "https://i.ibb.co.com/jbJcv2P/warm-for-dhaka.jpg",
-        "description": "Providing jackets and shawls to orphans in Comilla district.",
+        "title": "Helping Hands for Winter",
+        "image": "https://example.com/images/helping-hands.jpg",
+        "description": "Supporting families in need with winter supplies in the Rangpur division.",
         "status": "Active",
-        "contactInfo": "comilla_help@winterdonation.org | +880223344556",
-        "division": "Chattogram"
+        "contactInfo": "helping.hands.rangpur@example.com",
+        "division": "Rangpur"
     }
 ]

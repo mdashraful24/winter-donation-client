@@ -3,36 +3,46 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 // import Footer from "./Footer";
+import welcome from '../../src/assets/welcome-bg.jpg'
 
 const Dashboard = () => {
 
     const {user} = useContext(AuthContext);
 
     return (
-        <div className="">
-            {/* <nav>
-                <Navbar></Navbar>
-            </nav> */}
+        <div className="mt-20 mb-24 px-5">
+            <div
+                className="md:w-2/3 lg:w-1/4 mx-auto rounded-t-2xl bg-cover bg-center px-2 py-5 md:py-10"
+                style={{ backgroundImage: `url(${welcome})` }}
+            >
+                <h1 className="text-xl md:text-2xl text-white text-center font-bold">
+                    Welcome, <span className="text-orange-600">{user?.displayName || "User"}!</span>
+                </h1>
+            </div>
+
             <div className="flex flex-col items-center justify-center">
-                <h1 className="text-3xl font-bold mb-4">Welcome, {user?.displayName || "User"}!</h1>
-                <div className="card w-full max-w-md bg-gray-100 shadow-md p-6">
+                <div className="card w-full md:w-2/3 lg:w-1/4 rounded-t-none bg-white shadow-md p-6">
                     <img
                         src={user?.photoURL || "/default-avatar.jpg"}
                         alt="User Avatar"
                         className="w-32 h-32 rounded-full mx-auto mb-4"
                     />
                     <div className="text-center space-y-2">
-                        <p><strong>Email:</strong> {user?.email}</p>
+                        <p className="break-words">
+                            <strong>Email:</strong> {user?.email}
+                        </p>
                         <p><strong>Name:</strong> {user?.displayName || "Not Set"}</p>
-                        <Link to="/dashboard/update-profile">
-                            <button className="btn btn-neutral mt-4">Update Profile</button>
+                        <Link to="/update-profile">
+                            <button
+                                className="btn text-white mt-4"
+                                style={{ background: "linear-gradient(to right, #000066 0%, #0033cc 100%)" }}
+                            >
+                                Update Profile
+                            </button>
                         </Link>
                     </div>
                 </div>
             </div>
-            {/* <footer>
-                <Footer></Footer>
-            </footer> */}
         </div>
     );
 };

@@ -5,10 +5,10 @@ import Footer from "../components/Footer";
 const DonationLayout = () => {
     return (
         <div>
-            <nav className="container mx-auto py-6">
+            <nav>
                 <Navbar></Navbar>
             </nav>
-            <section className="container mx-auto">
+            <section>
                 <Outlet></Outlet>
             </section>
             <footer>

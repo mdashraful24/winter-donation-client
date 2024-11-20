@@ -1,4 +1,5 @@
 import AboutUs from "./AboutUs";
+import Animation from "./Animation";
 import Banner from "./Banner";
 import ExtraSecOne from "./ExtraSecOne";
 import ExtraSecTwo from "./ExtraSecTwo";
@@ -7,9 +8,12 @@ import HowItWorks from "./HowItWorks";
 const Home = () => {
 
     return (
-        <div className="lg:container mx-auto">
+        <div className="">
             {/* Banner */}
             <Banner></Banner>
+
+            {/* Animation */}
+            <Animation></Animation>
 
             {/* About us */}
             <AboutUs></AboutUs>
