@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 const DonationLayout = () => {
     return (
-        <div>
+        <div className="bg-gray-100">
             <nav>
                 <Navbar></Navbar>
             </nav>

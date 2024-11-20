@@ -50,7 +50,7 @@ const AboutUs = () => {
                 {/* Modal */}
                 {isModalOpen && (
                     <div className="modal modal-open">
-                        <div className="modal-box">
+                        <div className="modal-box text-justify">
                             <h3 className="text-lg font-bold">More About Us</h3>
                             <p className="py-4">
                                 Winter Clothing Donation is not just an initiative; it’s a movement to bring comfort to those in
@@ -63,7 +63,7 @@ const AboutUs = () => {
                             </p>
                             <div className="modal-action">
                                 <button
-                                    className="btn btn-neutral"
+                                    className="btn bg-[#6b2f7b] text-white hover:bg-[#5a0571]"
                                     onClick={() => setIsModalOpen(false)}
                                 >
                                     Close

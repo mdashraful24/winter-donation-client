@@ -3,11 +3,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
 import { FcGoogle } from "react-icons/fc";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
 
     const { createNewUser, setUser, updateUserProfiles, handleGoogleSignIn } = useContext(AuthContext);
     const [error, setError] = useState("");
+    const [showPassWord, setShowPassword] = useState(false);
     const navigate = useNavigate();
 
     const handleGoogleSignInClickReg = () => {
@@ -64,6 +66,7 @@ const Register = () => {
                     photoURL: photo
                 })
                     .then(() => {
+                        toast.success("Successfully Registered");
                         navigate("/");
                     })
                     .catch((err) => {
@@ -72,13 +75,15 @@ const Register = () => {
             })
             .catch((error) => {
                 // toast.error(error.message || "Please try again.");
-                toast.error(error.message, "Please try again.");
+                // setError(error.message);
+                setError({ register: "Email already in use." });
+                toast.error("Registration failed. Please try again.");
             })
     }
 
     return (
-        <div className="flex justify-center items-center my-10 px-5">
-            <div className="card bg-white w-full max-w-lg shrink-0 py-8">
+        <div className="flex justify-center items-center my-12 px-5">
+            <div className="card bg-white w-full max-w-md shrink-0 py-8">
                 <h2 className="text-2xl font-semibold text-center">Register Now!!!</h2>
                 <form onSubmit={handleSubmit} className="card-body pb-3 md:px-11">
                     <div className="form-control">
@@ -117,19 +122,27 @@ const Register = () => {
                             required
                         />
                     </div>
-                    <div className="form-control">
+                    <div className="form-control relative">
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
                         <input
-                            type="password"
+                            type={showPassWord ? 'text' : 'password'}
                             name="password"
                             placeholder="password"
                             className="input input-bordered w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
                             required
                         />
                     </div>
-                    {error && <p className="text-red-500 text-sm">{error}</p>}
+                    <button type="button" onClick={() => setShowPassword(!showPassWord)}
+                        className="absolute right-12 md:right-16 bottom-[16.8rem]">
+                        {
+                            showPassWord ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                        }
+                    </button>
+                    {
+                        error && <p className="text-red-500 text-sm">{error.register}</p>
+                    }
                     <div className="form-control mt-6">
                         <button className="btn text-white font-medium bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-400 shadow-md transition-all duration-200 border-none">Register</button>
                     </div>

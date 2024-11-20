@@ -1,4 +1,4 @@
-import review from '../../src/assets/winter-clothes-donationvector.png'
+import review from '../../src/assets/client-2.png'
 
 const ExtraSecOne = () => {
     return (

@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
+import logo from '../../src/assets/logo.png'
 
 const Navbar = () => {
 
@@ -69,7 +70,8 @@ const Navbar = () => {
                                 {links}
                             </ul>
                         </div>
-                        <a className="md:text-xl lg:text-3xl font-bold">Winter Donation</a>
+                        {/* <a className="md:text-xl lg:text-3xl font-bold cursor-pointer">Winter Clothing Donation</a> */}
+                        <img src={logo} alt="" />
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
@@ -87,11 +89,11 @@ const Navbar = () => {
                                     onClick={toggleDropdown}
                                 />
                                 {dropdownOpen && (
-                                    <div className="absolute right-0 mt-2 w-28 bg-white border rounded-lg shadow-lg z-10">
+                                    <div className="absolute right-0 mt-2 w-28 shadow-lg z-10">
                                         <ul className="py-">
                                             <li>
                                                 <button
-                                                    className="block w-full py-2 font-bold bg-red-300 rounded-lg text-center hover:bg-gray-100"
+                                                    className="block w-full py-2 rounded-lg text-white bg-gradient-to-r from-red-500 to-yellow-600 hover:from-red-600 hover:to-yellow-700 focus:outline-none focus:ring-2 focus:ring-red-400 shadow-md transition-all duration-200 border-none"
                                                     onClick={handleSignOut}
                                                 >
                                                     Sign Out

@@ -53,26 +53,25 @@ const DonationDetails = () => {
                     </div>
 
                     <div className="flex-1 space-y-2">
-                        <h2 className="text-2xl font-semibold text-gray-800">Title: {title}</h2>
-                        <div className="text-lg">
-                            <p className="text-gray-700 font-semibold">Description: <span className="font-normal">{description}</span></p>
+                        <h2 className="text-2xl font-semibold">Title: {title}</h2>
+                        <div className="">
+                            <p className="font-semibold">Description: <span className="font-normal text-gray-600">{description}</span></p>
                         </div>
                         <div className="mt-1 space-y-1">
-                            <p className="text-lg font-semibold">
-                                <span className="text-black">Status: </span>
-                                <span className={`${status === 'Active' ? 'text-red-600' : status === 'Complete' ? 'text-green-600' : 'text-blue-600'}`}>
+                            <p className="font-semibold">
+                                <span>Status: </span>
+                                <span className={`${status === 'Active' ? 'text-blue-600' : status === 'Complete' ? 'text-green-600' : 'text-amber-600'}`}>
                                     {status}
                                 </span>
                             </p>
-
-                            <p className="text-lg text-gray-600"><span className="font-semibold">Contact Info:</span> {contactInfo}</p>
-                            <p className="text-lg text-gray-600"><span className="font-semibold">Division:</span> {division}</p>
+                            <p className="font-semibold">Contact Info: <span className="font-normal text-gray-600">{contactInfo}</span></p>
+                            <p className="font-semibold">Division: <span className="font-normal text-gray-600">{division}</span></p>
                         </div>
                     </div>
                 </div>
 
                 {/* Form Card */}
-                <div className="shadow-xl rounded-lg border p-6 bg-gray-100 flex flex-col">
+                <div className="shadow-xl rounded-lg border p-6 bg-white flex flex-col">
                     <form className="flex flex-col flex-1 justify-between" onSubmit={handleSubmitForm}>
                         <h2 className="text-3xl text-center font-semibold mb-4">Donation Form</h2>
                         <div className="mb-2">
@@ -83,7 +82,7 @@ const DonationDetails = () => {
                                 type="number"
                                 id="quantity"
                                 name="quantity"
-                                className="input input-bordered w-full"
+                                className="input input-bordered w-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#660066]"
                                 placeholder="e.g., 2 jackets, 3 blankets"
                                 value={formData.quantity}
                                 onChange={handleInputChange}
@@ -98,7 +97,7 @@ const DonationDetails = () => {
                                 type="text"
                                 id="itemType"
                                 name="itemType"
-                                className="input input-bordered w-full"
+                                className="input input-bordered w-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#660066]"
                                 placeholder="e.g., blanket, jacket, sweater"
                                 value={formData.itemType}
                                 onChange={handleInputChange}
@@ -113,7 +112,7 @@ const DonationDetails = () => {
                                 type="text"
                                 id="pickupLocation"
                                 name="pickupLocation"
-                                className="input input-bordered w-full"
+                                className="input input-bordered w-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#660066]"
                                 placeholder="e.g., House 12, Road 5, Dhanmondi, Dhaka"
                                 value={formData.pickupLocation}
                                 onChange={handleInputChange}
@@ -127,7 +126,7 @@ const DonationDetails = () => {
                             <textarea
                                 id="notes"
                                 name="notes"
-                                className="textarea textarea-bordered w-full"
+                                className="textarea textarea-bordered w-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#660066]"
                                 placeholder="Any additional information..."
                                 value={formData.notes}
                                 onChange={handleInputChange}

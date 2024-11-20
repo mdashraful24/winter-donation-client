@@ -44,15 +44,16 @@ const Login = () => {
                 navigate(location?.state ? location.state : "/");
             })
             .catch(err => {
-                setError({ ...error, login: err.code });
+                // setError({ ...error, login: err.code });
+                setError({ login: "Invalid credentials." });
                 toast.error("Login failed. Please check your credentials.");
             })
     }
 
     return (
-        <div className='my-10 px-5'>
+        <div className='my-12 px-5'>
             <div className="flex justify-center items-center">
-                <div className="card bg-white rounded-xl border w-full max-w-lg shrink-0 py-6 md:p-10">
+                <div className="card bg-white rounded-xl border w-full max-w-md shrink-0 py-6 p-3">
                     <h2 className='text-2xl font-semibold text-center'>Login Now</h2>
                     <form onSubmit={handleSubmit} className="card-body">
                         <div className="form-control">
@@ -83,13 +84,13 @@ const Login = () => {
                                     showPassWord ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
                                 }
                             </button>
-                            {/* {
+                            {
                                 error.login && (
                                     <label className="label text-sm text-red-600">
                                         {error.login}
                                     </label>
                                 )
-                            } */}
+                            }
                             <label className="label">
                                 <Link
                                     to={`/auth/forgot-password?email=${document.querySelector("[name='email']")?.value || ""}`}

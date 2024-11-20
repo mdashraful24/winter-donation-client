@@ -7,23 +7,23 @@ const HowItWorks = () => {
             <div className="container mx-auto flex flex-col lg:flex-row items-center gap-16 px-5">
                 {/* Text Section */}
                 <div className="lg:w-1/2">
-                    <h2 className="text-2xl font-bold text-[#3e194b] mb-6">
-                        1 - Collect Your Items
+                    <h2 className="text-2xl font-bold text-[#3e194b] mb-4">
+                        Collect Your Items
                     </h2>
                     <p className="text-gray-600 text-lg text-justify leading-relaxed mb-4">
-                        Simply pack the items you want to donate in boxes or bags. Write “Purple Heart Donation” in large letters on the outside.
+                        Pack the items you wish to donate in boxes or bags and label them clearly with "Purple Heart Donation" in large, bold letters.
                     </p>
-                    <h2 className="text-2xl font-bold text-[#3e194b] mb-6">
-                        2 - Schedule your pickup
+                    <h2 className="text-2xl font-bold text-[#3e194b] mb-4">
+                        Schedule your pickup
                     </h2>
                     <p className="text-gray-600 text-lg text-justify leading-relaxed mb-4">
-                        Call or click to schedule your convenient at-home pickup or to drop your donation off at one of the applicable locations. For Texas or Michigan click here to schedule.
+                        Call or click to schedule your convenient at-home pickup, or drop off your donation at one of our designated locations. If you're in Dhaka or Rangpur, click here to schedule your pickup.
                     </p>
-                    <h2 className="text-2xl font-bold text-[#3e194b] mb-6">
-                        3 - Set It & Forget It
+                    <h2 className="text-2xl font-bold text-[#3e194b] mb-4">
+                        Set It & Forget It
                     </h2>
-                    <p className="text-gray-600 text-lg text-justify leading-relaxed mb-4">
-                        On pickup day, leave your donation outside your front door. Our driver will promptly pick up and leave your tax receipt at the door!
+                    <p className="text-gray-600 text-lg text-justify leading-relaxed mb-10">
+                        On the scheduled pickup day, simply place your donation outside your front door. Our driver will promptly collect it and leave your tax receipt for you!
                     </p>
 
                     <button

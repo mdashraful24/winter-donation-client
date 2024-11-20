@@ -11,7 +11,7 @@
     {
         "id": 2,
         "title": "Cozy Nights Campaign",
-        "image": "https://example.com/images/cozy-nights.jpg",
+        "image": "https://i.ibb.co.com/YcSf5Mm/donation-camp-2.jpg",
         "description": "Distributing winter jackets and thermal wear to underprivileged communities in Chattogram.",
         "status": "Active",
         "contactInfo": "winter.chattogram@example.com",
@@ -20,7 +20,7 @@
     {
         "id": 3,
         "title": "Warm Smiles Drive",
-        "image": "https://example.com/images/warm-smiles.jpg",
+        "image": "https://i.ibb.co.com/b29SRVR/donation-camp-3.jpg",
         "description": "Helping children with winter clothing in the Sylhet division.",
         "status": "Upcoming",
         "contactInfo": "warm.smiles.sylhet@example.com",
@@ -29,7 +29,7 @@
     {
         "id": 4,
         "title": "Blankets for Everyone",
-        "image": "https://example.com/images/blankets-for-everyone.jpg",
+        "image": "https://i.ibb.co.com/rwH0d4T/donation-camp-4.jpg",
         "description": "Donating blankets and socks in the Rajshahi division to combat winter.",
         "status": "Upcoming",
         "contactInfo": "blankets.rajshahi@example.com",
@@ -38,7 +38,7 @@
     {
         "id": 5,
         "title": "Shelter and Support",
-        "image": "https://example.com/images/shelter-support.jpg",
+        "image": "https://i.ibb.co.com/RY42TxL/donation-camp-5.jpg",
         "description": "Winter essentials drive for flood-affected areas in the Barishal division.",
         "status": "Complete",
         "contactInfo": "support.barishal@example.com",
@@ -47,7 +47,7 @@
     {
         "id": 6,
         "title": "Winter Essentials Outreach",
-        "image": "https://example.com/images/winter-essentials.jpg",
+        "image": "https://i.ibb.co.com/PFDbfRX/donation-camp-6.jpg",
         "description": "Providing gloves and caps to vulnerable families in the Khulna division.",
         "status": "Complete",
         "contactInfo": "essentials.khulna@example.com",
@@ -56,7 +56,7 @@
     {
         "id": 7,
         "title": "Care for the Cold",
-        "image": "https://example.com/images/care-for-cold.jpg",
+        "image": "https://i.ibb.co.com/RHBjK3m/donation-camp-7.jpg",
         "description": "Winter aid for remote areas of the Mymensingh division.",
         "status": "Active",
         "contactInfo": "care.mymensingh@example.com",
@@ -65,7 +65,7 @@
     {
         "id": 8,
         "title": "Together Against Winter",
-        "image": "https://example.com/images/together-winter.jpg",
+        "image": "https://i.ibb.co.com/dBbbrm9/donation-camp-8.jpg",
         "description": "Distributing heating pads and thermal clothing in Rangpur.",
         "status": "Complete",
         "contactInfo": "together.rangpur@example.com",
@@ -74,7 +74,7 @@
     {
         "id": 9,
         "title": "Helping Hands for Winter",
-        "image": "https://example.com/images/helping-hands.jpg",
+        "image": "https://i.ibb.co.com/7R5bjWx/donation-camp-9.jpg",
         "description": "Supporting families in need with winter supplies in the Rangpur division.",
         "status": "Active",
         "contactInfo": "helping.hands.rangpur@example.com",
