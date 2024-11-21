@@ -1,8 +1,12 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const HowToHelp = () => {
     return (
         <div className="container mx-auto mt-14 mb-20 px-5">
+            <Helmet>
+                <title>How to Help | Winter Clothing Donation</title>
+            </Helmet>
             {/* <h1 className="text-3xl font-bold mb-8">How to Help</h1> */}
             <h2 className="text-3xl md:text-5xl text-center text-[#491558] font-bold mb-12">
                 How to Help

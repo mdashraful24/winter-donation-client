@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 // import Footer from "./Footer";
 import welcome from '../../src/assets/welcome-bg.jpg'
+import { Helmet } from "react-helmet-async";
 
 const Dashboard = () => {
 
@@ -11,6 +12,9 @@ const Dashboard = () => {
 
     return (
         <div className="mt-20 mb-24 px-5">
+            <Helmet>
+                <title>Dashboard | Winter Clothing Donation</title>
+            </Helmet>
             <div
                 className="md:w-2/3 lg:w-1/4 mx-auto rounded-t-2xl bg-cover bg-center px-2 py-5 md:py-10"
                 style={{ backgroundImage: `url(${welcome})` }}

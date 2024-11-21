@@ -6,14 +6,17 @@ import router from './routes/router.jsx'
 import AuthProvider from './provider/AuthProvider.jsx'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { HelmetProvider } from 'react-helmet-async'
 
 createRoot(document.getElementById('root')).render(
   <div className="font-poppins bg-white">
     <StrictMode>
-      <AuthProvider>
-        <RouterProvider router={router}></RouterProvider>
-        <ToastContainer position="top-center" autoClose={1500} />
-      </AuthProvider>
+      <HelmetProvider>
+        <AuthProvider>
+          <RouterProvider router={router}></RouterProvider>
+          <ToastContainer position="top-center" autoClose={1500} />
+        </AuthProvider>
+      </HelmetProvider>
     </StrictMode>
   </div>
 )

@@ -9,15 +9,16 @@ const Footer = () => {
                     {/* Contact Information */}
                     <div>
                         <h2 className="text-white text-base font-semibold uppercase">Contact Information</h2>
-                        <p className='text-gray-300'>Email: <a className="link link-hover">contact@winterdonation.com</a></p>
+                        <p className='text-gray-300'>Email: <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" className="link link-hover" target="_blank">donations@winterclothing.org</a></p>
                         <p className='text-gray-300'>Phone: <a className="link link-hover">+123 456 7890</a></p>
-                        <p className='text-gray-300'>Address: 123 Main Street, Your City</p>
+                        <p className='text-gray-300'>Address: 12, Mirpur-1, Dhaka</p>
                     </div>
+                    {/* Social Media */}
                     <div>
                         <h2 className="text-white text-base font-semibold uppercase">Follow Us</h2>
                         <div className="flex gap-4">
                             <a
-                                href="https://www.facebook.com/"
+                                href="https://www.facebook.com/ashraful.islam.ratul.455820?mibextid=ZbWKwL"
                                 className="btn btn-square btn-outline text-2xl bg-gray-200 text-blue-600 border-blue-600 hover:bg-blue-600 hover:text-white"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -50,8 +51,6 @@ const Footer = () => {
                             </a>
                         </div>
                     </div>
-
-
                     {/* Copyright Notice */}
                     <div>
                         <h2 className="text-white text-base font-semibold uppercase">Legal</h2>

@@ -12,14 +12,14 @@ const Animation = () => {
     }, []);
 
     return (
-        <div className="my-10 px-5">
+        <div className="md:my-10 px-5">
             <section className="container mx-auto text-center bg-bul py-12">
                 {/* Header */}
                 <div
                     data-aos="fade-up"
                     className="mx-auto w-full lg:w-2/3 p-6 bg-blue-50 rounded-lg shadow-xl"
                 >
-                    <h2 className="text-2xl md:text-4xl font-bold text- mb-4">Welcome to Winter Clothing Donation!</h2>
+                    <h2 className="text-2xl md:text-4xl font-bold text-[#491558] mb-4">Welcome to Winter Clothing Donation!</h2>
                     <p className="md:text-lg text-gray-600 mb-6">
                         Your old winter clothes can help those in need. Donate now and make a difference!
                     </p>

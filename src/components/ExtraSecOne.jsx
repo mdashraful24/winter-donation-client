@@ -1,4 +1,7 @@
-import review from '../../src/assets/client-2.png'
+import first from '../../src/assets/people1.jpg'
+import second from '../../src/assets/people2.png'
+import third from '../../src/assets/people3.jpg'
+import four from '../../src/assets/people4.jpg'
 
 const ExtraSecOne = () => {
     return (
@@ -8,7 +11,7 @@ const ExtraSecOne = () => {
                 <div class="max-w-4xl mx-auto grid gap-6 lg:grid-cols-2">
                     {/* <!-- Testimonial 1 --> */}
                     <div class="bg-white p-6 shadow-md hover:shadow-xl rounded-lg">
-                        <img class="w-12 h-12 rounded-full mr-4 mb-2" src={review} alt="Maria's picture"></img>
+                        <img class="w-12 h-12 rounded-full mr-4 mb-2" src={first} alt="Maria's picture"></img>
                         <p class="text-gray-700 italic">
                             "Thanks to this initiative, my family received warm coats just in time for winter. It has been a lifesaver for us."
                         </p>
@@ -18,7 +21,7 @@ const ExtraSecOne = () => {
                     </div>
                     {/* <!-- Testimonial 2 --> */}
                     <div class="bg-white p-6 shadow-md hover:shadow-xl rounded-lg">
-                        <img class="w-12 h-12 rounded-full mr-4 mb-2" src={review} alt="Maria's picture"></img>
+                        <img class="w-12 h-12 rounded-full mr-4 mb-2" src={second} alt="Maria's picture"></img>
                         <p class="text-gray-700 italic">
                             "The jacket I received has made such a difference in my daily life. I’m so grateful for the support."
                         </p>
@@ -28,7 +31,7 @@ const ExtraSecOne = () => {
                     </div>
                     {/* <!-- Testimonial 3 --> */}
                     <div class="bg-white p-6 shadow-md hover:shadow-xl rounded-lg">
-                        <img class="w-12 h-12 rounded-full mr-4 mb-2" src={review} alt="Maria's picture"></img>
+                        <img class="w-12 h-12 rounded-full mr-4 mb-2" src={third} alt="Maria's picture"></img>
                         <p class="text-gray-700 italic">
                             "This program brought warmth to our lives, not just physically but emotionally too. Thank you!"
                         </p>
@@ -38,7 +41,7 @@ const ExtraSecOne = () => {
                     </div>
                     {/* <!-- Testimonial 4 --> */}
                     <div class="bg-white p-6 shadow-md hover:shadow-xl rounded-lg">
-                        <img class="w-12 h-12 rounded-full mr-4 mb-2" src={review} alt="Maria's picture"></img>
+                        <img class="w-12 h-12 rounded-full mr-4 mb-2" src={four} alt="Maria's picture"></img>
                         <p class="text-gray-700 italic">
                             "Knowing someone cares made all the difference. My children now have boots to walk to school in the snow."
                         </p>

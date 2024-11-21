@@ -4,6 +4,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { toast } from "react-toastify";
 import { FcGoogle } from "react-icons/fc";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
     const { userLogin, setUser, handleGoogleSignIn } = useContext(AuthContext);
@@ -45,13 +46,16 @@ const Login = () => {
             })
             .catch(err => {
                 // setError({ ...error, login: err.code });
-                setError({ login: "Invalid credentials." });
-                toast.error("Login failed. Please check your credentials.");
+                setError({ login: "Please check your email and password." });
             })
+
     }
 
     return (
         <div className='my-12 px-5'>
+            <Helmet>
+                <title>Login Now | Winter Clothing Donation</title>
+            </Helmet>
             <div className="flex justify-center items-center">
                 <div className="card bg-white rounded-xl border w-full max-w-md shrink-0 py-6 p-3">
                     <h2 className='text-2xl font-semibold text-center'>Login Now</h2>
@@ -64,7 +68,7 @@ const Login = () => {
                                 type="email"
                                 name="email"
                                 placeholder="email"
-                                className="input input-bordered border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                                className="input input-bordered border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 required />
                         </div>
                         <div className="form-control relative">
@@ -117,8 +121,8 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-            
-            
+
+
         </div>
     );
 };

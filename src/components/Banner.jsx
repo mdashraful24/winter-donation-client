@@ -1,83 +1,11 @@
-// import React from "react";
-// import { Carousel } from "react-responsive-carousel";
-// import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import logo from '../../src/assets/banner1.jpeg'
-
-// const Banner = () => {
-//     return (
-//         <div className="lg:w-8/12 lg:mx-auto">
-//             <Carousel
-//                 infiniteLoop
-//                 useKeyboardArrows
-//                 autoPlay
-//                 showThumbs={false}
-//                 showStatus={false}
-//                 showIndicators={true}
-//                 dynamicHeight={false}
-//                 swipeable
-//                 emulateTouch
-//                 interval={3000}
-//                 transitionTime={500}
-//                 thumbWidth={80}
-//                 stopOnHover
-//                 renderArrowPrev={(clickHandler) => (
-//                     <button
-//                         className="absolute top-1/2 left-5 transform -translate-y-1/2 bg-black text-white p-3 rounded-full shadow-lg z-10"
-//                         onClick={clickHandler}
-//                     >
-//                         &lt;
-//                     </button>
-//                 )}
-//                 renderArrowNext={(clickHandler) => (
-//                     <button
-//                         className="absolute top-1/2 right-5 transform -translate-y-1/2 bg-black text-white p-3 rounded-full shadow-lg z-10"
-//                         onClick={clickHandler}
-//                     >
-//                         &gt;
-//                     </button>
-//                 )}
-//             >
-//                 <div>
-//                     <img
-//                         src={logo}
-//                         alt="image 1"
-//                         className="w-full h-[600px] object-cover"
-//                     />
-//                 </div>
-//                 <div>
-//                     <img
-//                         src="https://i.ibb.co.com/qNbRft4/3.jpg"
-//                         alt="image 2"
-//                         className="w-full h-[600px] object-cover"
-//                     />
-//                 </div>
-//                 <div>
-//                     <img
-//                         src="https://i.ibb.co.com/qNbRft4/3.jpg"
-//                         alt="image 3"
-//                         className="w-full h-[600px] object-cover"
-//                     />
-//                 </div>
-//                 <div>
-//                     <img
-//                         src="https://i.ibb.co.com/qNbRft4/3.jpg"
-//                         alt="image 4"
-//                         className="w-full h-[600px] object-cover"
-//                     />
-//                 </div>
-//             </Carousel>
-//         </div>
-//     );
-// };
-
-// export default Banner;
-
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import first from '../../src/assets/banner1.jpeg'
-import second from '../../src/assets/banner2.jpg'
-import third from '../../src/assets/banner3.jpg'
+import image1 from '../../src/assets/winter-morning.jpg'
+import image2 from '../../src/assets/winter-morning3.jpg'
+import image3 from '../../src/assets/donate.jpg'
+import image4 from '../../src/assets/donate2.jpg'
+import image5 from '../../src/assets/donate3.jpg'
 
 const Banner = () => {
     return (
@@ -114,23 +42,37 @@ const Banner = () => {
             >
                 <div>
                     <img
-                        src={first}
+                        src={image1}
                         alt="Banner 1"
-                        className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-lg object-cover"
+                        className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-lg"
                     />
                 </div>
                 <div>
                     <img
-                        src={second}
+                        src={image2}
                         alt="Banner 2"
-                        className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-lg object-cover"
+                        className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-lg"
                     />
                 </div>
                 <div>
                     <img
-                        src={third}
+                        src={image3}
                         alt="Banner 3"
-                        className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-lg object-cover"
+                        className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-lg"
+                    />
+                </div>
+                <div>
+                    <img
+                        src={image4}
+                        alt="Banner 3"
+                        className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-lg"
+                    />
+                </div>
+                <div>
+                    <img
+                        src={image5}
+                        alt="Banner 3"
+                        className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-lg"
                     />
                 </div>
             </Carousel>

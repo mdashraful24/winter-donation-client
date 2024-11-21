@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const DonationDetails = () => {
     const data = useLoaderData();
@@ -38,6 +39,9 @@ const DonationDetails = () => {
 
     return (
         <div className="container mx-auto mt-14 mb-20 px-5">
+            <Helmet>
+                <title>Donation Details | Winter Clothing Donation</title>
+            </Helmet>
             <h2 className="text-4xl text-center md:text-5xl text-[#491558] font-bold mb-12">
                 Donation Details
             </h2>

@@ -2,7 +2,8 @@ import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
-import logo from '../../src/assets/logo.png'
+// import logo from '../../src/assets/logo.png'
+// import siteLogo from '../../src/assets/site-logo.png'
 
 const Navbar = () => {
 
@@ -70,8 +71,8 @@ const Navbar = () => {
                                 {links}
                             </ul>
                         </div>
-                        {/* <a className="md:text-xl lg:text-3xl font-bold cursor-pointer">Winter Clothing Donation</a> */}
-                        <img src={logo} alt="" />
+                        <a href="/" className="md:text-2xl lg:text-3xl text-[#591a6a] font-bold cursor-pointer">Winter Clothing Donation</a>
+                        {/* <a href="/"><img src={siteLogo} alt="siteLogo" /></a> */}
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
@@ -93,7 +94,7 @@ const Navbar = () => {
                                         <ul className="py-">
                                             <li>
                                                 <button
-                                                    className="block w-full py-2 rounded-lg text-white bg-gradient-to-r from-red-500 to-yellow-600 hover:from-red-600 hover:to-yellow-700 focus:outline-none focus:ring-2 focus:ring-red-400 shadow-md transition-all duration-200 border-none"
+                                                    className="block w-full py-2 rounded-lg bg-zinc-700 font-semibold text-white hover:bg-[#2d0c36]"
                                                     onClick={handleSignOut}
                                                 >
                                                     Sign Out

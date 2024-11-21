@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
     const { user, updateUserProfiles, setUser } = useContext(AuthContext);
@@ -68,6 +69,9 @@ const UpdateProfile = () => {
 
     return (
         <div className="bg-gray-100">
+            <Helmet>
+                <title>Update Profile | Winter Clothing Donation</title>
+            </Helmet>
             <Navbar></Navbar>
             <div className="flex flex-col items-center justify-center mt-20 mb-36 px-5">
                 <h2 className="text-3xl md:text-4xl text-center text-[#491558] font-bold mb-6">Update Profile</h2>
