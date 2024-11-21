@@ -1,3 +1,5 @@
+Assignment  Category: 001
+
 Project Name: Winter Clothing Donation
 
 The purpose of this project is to:
@@ -25,3 +27,17 @@ NPM Packages Used
         3.	DaisyUI: Tailwind CSS components for faster UI design.
         4.	AOS (Animate on Scroll): For smooth animations on scroll.
         5.	React Icons: To enhance the visual experience with icons.
+
+GitHub  Repo  Link:
+
+    https://github.com/programming-hero-web-course1/b10-a9-authentication-mdashraful24 
+
+Live  Link:
+
+Firebase: 
+
+•	https://winter-donation-2ff74.web.app/
+
+•	https://winter-donation-2ff74.firebaseapp.com/
+
+Netlify: https://winter-cloathing-donation.netlify.app/
