@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 const HelpLayout = () => {
     return (
         <div className="bg-gray-100 ">
+            {/* Help Route */}
             <Navbar></Navbar>
             <HowToHelp></HowToHelp>
             <Footer></Footer>

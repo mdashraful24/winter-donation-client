@@ -10,33 +10,29 @@ const Login = () => {
     const { userLogin, setUser, handleGoogleSignIn } = useContext(AuthContext);
     const [error, setError] = useState({});
     const [showPassWord, setShowPassword] = useState(false);
-
     const navigate = useNavigate();
     const location = useLocation();
-    // console.log(location)
 
+    // Handle signIn
     const handleGoogleSignInClick = () => {
         handleGoogleSignIn()
             .then(result => {
                 const user = result.user;
-                setUser(user);  // Store the authenticated user
+                setUser(user);
                 toast.success("Successfully! Login with Google");
-                navigate(location?.state ? location.state : "/");  // Redirect to the previous or home page
+                navigate(location?.state ? location.state : "/");
             })
             .catch(error => {
-                // console.log("ERROR", error);
                 setError({ ...error, google: error.message });
                 toast.error("Google Sign-In Failed. Please try again.");
             });
     }
-
+    // Handle submit
     const handleSubmit = (e) => {
         e.preventDefault();
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        // console.log({ email, password });
-
         userLogin(email, password)
             .then(result => {
                 const user = result.user;
@@ -45,17 +41,18 @@ const Login = () => {
                 navigate(location?.state ? location.state : "/");
             })
             .catch(err => {
-                // setError({ ...error, login: err.code });
-                setError({ login: "Please check your email and password." });
+                setError({ login: "Please check your email or password." });
             })
-
     }
 
     return (
         <div className='my-12 px-5'>
+            {/* Helmet */}
             <Helmet>
                 <title>Login Now | Winter Clothing Donation</title>
             </Helmet>
+
+            {/* Login form */}
             <div className="flex justify-center items-center">
                 <div className="card bg-white rounded-xl border w-full max-w-md shrink-0 py-6 p-3">
                     <h2 className='text-2xl font-semibold text-center'>Login Now</h2>
@@ -109,7 +106,7 @@ const Login = () => {
                         </div>
                     </form>
                     <p className='text-center text-sm'>
-                        Don't Have An Account? <Link to='/auth/register' className='text-red-500 font-semibold'>Register</Link>
+                        Don't Have An Account? <Link to='/auth/register' className='text-red-500 font-semibold hover:underline'>Register</Link>
                     </p>
                     <div className="text-center w-10/12 mx-auto mt-5">
                         <button onClick={handleGoogleSignInClick}
@@ -121,8 +118,6 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-
-
         </div>
     );
 };

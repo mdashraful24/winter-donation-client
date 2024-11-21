@@ -5,7 +5,6 @@ import Footer from "../components/Footer";
 import { Helmet } from "react-helmet-async";
 
 const DonationCamp = () => {
-
     const [donations, setDonations] = useState([]);
 
     useEffect(() => {
@@ -16,9 +15,12 @@ const DonationCamp = () => {
 
     return (
         <div className="bg-gray-50">
+            {/* Helmet */}
             <Helmet>
                 <title>Donation Campaign | Winter Clothing Donation</title>
             </Helmet>
+            
+            {/* Donation Campaigns */}
             <Navbar></Navbar>
             <div className="container mx-auto mt-14 mb-28 px-5">
                 <h2 className="text-4xl text-center md:text-5xl text-[#491558] font-bold mb-14">

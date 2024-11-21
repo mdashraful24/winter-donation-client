@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
 const CampaignCard = ({ donation }) => {
-
     const { id, image, title, description, division } = donation;
+    
     return (
         <div className="card bg-base-100 shadow-lg p-6 rounded-xl">
             <figure className="mb-4">

@@ -4,15 +4,17 @@ import { Helmet } from "react-helmet-async";
 const HowToHelp = () => {
     return (
         <div className="container mx-auto mt-14 mb-20 px-5">
+            {/* Helmet */}
             <Helmet>
                 <title>How to Help | Winter Clothing Donation</title>
             </Helmet>
-            {/* <h1 className="text-3xl font-bold mb-8">How to Help</h1> */}
+
+            {/* How to help */}
             <h2 className="text-3xl md:text-5xl text-center text-[#491558] font-bold mb-12">
                 How to Help
             </h2>
             <div className="grid lg:grid-cols-3 gap-6">
-                {/* View Donation Guide */}
+                {/* Donation Items */}
                 <div className="card bg-base-100 shadow-md border">
                     <div className="card-body">
                         <h2 className="card-title text-xl font-semibold">Donate Items</h2>
@@ -25,7 +27,6 @@ const HowToHelp = () => {
                         </label>
                     </div>
                 </div>
-
                 {/* Share Now */}
                 <div className="card bg-base-100 shadow-md border">
                     <div className="card-body">
@@ -38,7 +39,6 @@ const HowToHelp = () => {
                         </label>
                     </div>
                 </div>
-
                 {/* Volunteer */}
                 <div className="card bg-base-100 shadow-md border">
                     <div className="card-body">
@@ -52,8 +52,7 @@ const HowToHelp = () => {
                     </div>
                 </div>
             </div>
-
-            {/* Ready to Start */}
+            {/* Ready to make */}
             <div className="text-center mt-12">
                 <h2 className="text-2xl font-bold">Ready to Make a Difference?</h2>
                 <p className="text-gray-600 mt-2">
@@ -82,7 +81,6 @@ const HowToHelp = () => {
                     </div>
                 </div>
             </div>
-
             {/* Share Modal */}
             <input type="checkbox" id="share-modal" className="modal-toggle" />
             <div className="modal">
@@ -99,7 +97,6 @@ const HowToHelp = () => {
                     </div>
                 </div>
             </div>
-
             {/* Volunteer Modal */}
             <input type="checkbox" id="volunteer-modal" className="modal-toggle" />
             <div className="modal">

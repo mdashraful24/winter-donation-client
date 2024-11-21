@@ -1,20 +1,20 @@
 import { Link } from "react-router-dom";
-// import Navbar from "./Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
-// import Footer from "./Footer";
 import welcome from '../../src/assets/welcome-bg.jpg'
 import { Helmet } from "react-helmet-async";
 
 const Dashboard = () => {
-
     const {user} = useContext(AuthContext);
 
     return (
         <div className="mt-20 mb-24 px-5">
+            {/* Helmet */}
             <Helmet>
                 <title>Dashboard | Winter Clothing Donation</title>
             </Helmet>
+
+            {/* Dashboard */}
             <div
                 className="md:w-2/3 lg:w-1/4 mx-auto rounded-t-2xl bg-cover bg-center px-2 py-5 md:py-10"
                 style={{ backgroundImage: `url(${welcome})` }}
@@ -23,7 +23,6 @@ const Dashboard = () => {
                     Welcome, <span className="text-orange-600">{user?.displayName || "User"}!</span>
                 </h1>
             </div>
-
             <div className="flex flex-col items-center justify-center">
                 <div className="card w-full md:w-2/3 lg:w-1/4 rounded-t-none bg-white shadow-md p-6">
                     <img

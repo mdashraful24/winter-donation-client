@@ -9,12 +9,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import { HelmetProvider } from 'react-helmet-async'
 
 createRoot(document.getElementById('root')).render(
-  <div className="font-poppins bg-white">
+  <div className="font-poppins">
     <StrictMode>
       <HelmetProvider>
         <AuthProvider>
           <RouterProvider router={router}></RouterProvider>
-          <ToastContainer position="top-center" autoClose={1500} />
+          <ToastContainer position="top-center" autoClose={1700} />
         </AuthProvider>
       </HelmetProvider>
     </StrictMode>

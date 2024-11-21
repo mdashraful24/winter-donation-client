@@ -13,7 +13,6 @@ import Dashboard from "../components/Dashboard";
 import UpdateProfile from "../pages/UpdateProfile";
 import DashboardLayout from "../layouts/DashboardLayout";
 import ForgotPassWord from "../pages/ForgotPassWord";
-// import json from "../../public/donation.json"
 
 const router = createBrowserRouter([
     {
@@ -63,7 +62,6 @@ const router = createBrowserRouter([
                     return donations.find((donation) => donation.id === Number(params.id));
                 }
             }
-
         ]
     },
     {
@@ -88,10 +86,6 @@ const router = createBrowserRouter([
             <UpdateProfile></UpdateProfile>
         </PrivateRoute>
     },
-    // {
-    //     path: 'update-profile',
-    //     element: <UpdateProfile></UpdateProfile>
-    // },
     {
         path: '*',
         element: <ErrorPage></ErrorPage>

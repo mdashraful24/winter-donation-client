@@ -26,6 +26,14 @@ const Footer = () => {
                                 <FaFacebook />
                             </a>
                             <a
+                                href="https://www.linkedin.com/"
+                                className="btn btn-square btn-outline text-2xl bg-gray-200 text-blue-700 border-blue-700 hover:bg-blue-700 hover:text-white"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FaLinkedin />
+                            </a>
+                            <a
                                 href="https://x.com/?lang=en"
                                 className="btn btn-square btn-outline text-2xl bg-gray-200 text-blue-500 border-blue-400 hover:bg-blue-400 hover:text-white"
                                 target="_blank"
@@ -40,14 +48,6 @@ const Footer = () => {
                                 rel="noopener noreferrer"
                             >
                                 <FaInstagram />
-                            </a>
-                            <a
-                                href="https://www.linkedin.com/"
-                                className="btn btn-square btn-outline text-2xl bg-gray-200 text-blue-700 border-blue-700 hover:bg-blue-700 hover:text-white"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <FaLinkedin />
                             </a>
                         </div>
                     </div>

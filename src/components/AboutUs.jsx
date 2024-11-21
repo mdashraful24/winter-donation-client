@@ -6,9 +6,8 @@ const AboutUs = () => {
 
     return (
         <div>
-            {/* About Section */}
-            <section className="mb-28 bg-slate-100 py-20">
-                <div className="container mx-auto flex flex-col lg:flex-row items-center gap-16 rounded-lg px-5">
+            <section className="mb-12 md:mb-16 lg:mb-24 bg-slate-50 py-10 lg:py-20">
+                <div className="container mx-auto flex flex-col lg:flex-row items-center lg:gap-16 rounded-lg px-5">
                     {/* Text Section */}
                     <div className="lg:w-1/2">
                         <h2 className="text-3xl md:text-4xl text-[#491558] font-bold text- mb-6">
@@ -27,7 +26,7 @@ const AboutUs = () => {
                             </ul>
                         </div>
                         <button
-                            className="py-2 px-6 text-white font-semibold rounded-md mt-4"
+                            className="py-2 px-6 text-white font-semibold rounded-md mt-4 mb-10 md:mb-14"
                             onClick={() => setIsModalOpen(true)}
                             style={{
                                 backgroundColor: '#6b2f7b',
@@ -37,7 +36,6 @@ const AboutUs = () => {
                             Read More
                         </button>
                     </div>
-
                     <div className="lg:w-1/2">
                         <img
                             src={logo}
@@ -46,21 +44,19 @@ const AboutUs = () => {
                         />
                     </div>
                 </div>
-
+                
                 {/* Modal */}
                 {isModalOpen && (
                     <div className="modal modal-open">
                         <div className="modal-box text-justify">
-                            <h3 className="text-lg font-bold">More About Us</h3>
+                            <h3 className="text-lg font-bold">How You Can Contribute</h3>
                             <p className="py-4">
-                                Winter Clothing Donation is not just an initiative; it’s a movement to bring comfort to those in
-                                need during the most challenging season. By contributing to our cause, you’re directly helping
-                                individuals and families stay warm and protected. Join us in spreading love and warmth!
+                                Contributing is simple and impactful:
                             </p>
-                            <p>
-                                Through partnerships, donations, and community engagement, we aim to bring hope and dignity to
-                                those who need it most. Together, we can make a lasting impact.
-                            </p>
+                            <ul className="list-disc text-gray-600 pl-6 md:ml-2 space-y-1">
+                                <li><span className="font-bold">Donate Clothes:</span> Log in to the website, fill out the donation form, and specify the type and quantity of winter clothing you'd like to donate.</li>
+                                <li><span className="font-bold">Spread the Word:</span> Share the campaign with your friends, family, and social networks to amplify the reach and encourage more donations.</li>
+                            </ul>
                             <div className="modal-action">
                                 <button
                                     className="btn bg-[#6b2f7b] text-white hover:bg-[#5a0571]"

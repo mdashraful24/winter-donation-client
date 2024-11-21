@@ -1,11 +1,11 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import image1 from '../../src/assets/winter-morning.jpg'
-import image2 from '../../src/assets/winter-morning3.jpg'
+import image1 from '../../src/assets/winter-is-here.jpg'
+import image2 from '../../src/assets/donate3.jpg'
 import image3 from '../../src/assets/donate.jpg'
 import image4 from '../../src/assets/donate2.jpg'
-import image5 from '../../src/assets/donate3.jpg'
+import image5 from '../../src/assets/local-support.jpg'
 
 const Banner = () => {
     return (

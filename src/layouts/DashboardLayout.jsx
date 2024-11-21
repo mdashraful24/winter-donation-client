@@ -5,15 +5,10 @@ import Footer from "../components/Footer";
 const DashboardLayout = () => {
     return (
         <div className="bg-gray-100">
-            <nav>
-                <Navbar></Navbar>
-            </nav>
-            <section>
-                <Outlet></Outlet>
-            </section>
-            <footer>
-                <Footer></Footer>
-            </footer>
+            {/* Dashboard Route */}
+            <Navbar></Navbar>
+            <Outlet></Outlet>
+            <Footer></Footer>
         </div>
     );
 };

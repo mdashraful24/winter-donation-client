@@ -1,26 +1,26 @@
 import { useContext, useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
-// import logo from '../../src/assets/logo.png'
-// import siteLogo from '../../src/assets/site-logo.png'
+import siteLogo from '../../src/assets/site-logo.png'
 
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext);
-
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const navigate = useNavigate();
 
+    // Sign out
     const handleSignOut = () => {
         logOut()
             .then(() => {
                 toast.success("User signed out successfully");
+                navigate("/");
             })
             .catch((error) => {
                 toast.error(error.message);
             })
     };
-
     const toggleDropdown = () => {
         setDropdownOpen(prev => !prev);
     }
@@ -46,7 +46,7 @@ const Navbar = () => {
     );
 
     return (
-        <div className="bg-gray-300 p-2 bg-opacity-2">
+        <div className="p-2 md:py-3 bg-gray-300">
             <div className="container mx-auto">
                 <div className="navbar">
                     <div className="navbar-start">
@@ -71,8 +71,17 @@ const Navbar = () => {
                                 {links}
                             </ul>
                         </div>
-                        <a href="/" className="md:text-2xl lg:text-3xl text-[#591a6a] font-bold cursor-pointer">Winter Clothing Donation</a>
-                        {/* <a href="/"><img src={siteLogo} alt="siteLogo" /></a> */}
+                        <div className="flex items-center">
+                            <a
+                                href="/"
+                                className="lg:hidden md:text-2xl text-[#591a6a] font-bold"
+                            >
+                                Winter Clothing Donation
+                            </a>
+                            <a href="/" className="hidden lg:block">
+                                <img src={siteLogo} alt="siteLogo" className=" h-10 lg:w-96 lg:h-12" />
+                            </a>
+                        </div>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">

@@ -5,15 +5,10 @@ import Navbar from "../components/Navbar";
 const HomeLayout = () => {
     return (
         <div>
-            <nav className="">
-                <Navbar></Navbar>
-            </nav>
-            <main>
-                <Home></Home>
-            </main>
-            <footer>
-                <Footer></Footer>
-            </footer>
+            {/* Home Route */}
+            <Navbar></Navbar>
+            <Home></Home>
+            <Footer></Footer>
         </div>
     );
 };

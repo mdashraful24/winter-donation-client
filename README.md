@@ -1,8 +1,27 @@
-# React + Vite
+Project Name: Winter Clothing Donation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The purpose of this project is to:
 
-Currently, two official plugins are available:
+    •	Facilitate clothing donations for the winter season.
+    •	Connect donors with volunteers who distribute the clothing to people in need.
+    •	Raise awareness about the plight of vulnerable communities during the winter.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Key Features
+
+    1.	Donation Campaigns
+    2.	User Authentication
+    3.	Donation Form
+    4.	Responsive Design
+    5.	Animations
+    6.	Update Profile
+    7.	Password Toggling 
+    8.	Forget Password
+
+NPM Packages Used
+
+    Here’s some npm packages used in the project:
+        1.	React: Frontend framework for building the application.
+        2.	Tailwind CSS: For styling the application with utility-first CSS.
+        3.	DaisyUI: Tailwind CSS components for faster UI design.
+        4.	AOS (Animate on Scroll): For smooth animations on scroll.
+        5.	React Icons: To enhance the visual experience with icons.

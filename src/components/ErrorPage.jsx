@@ -1,8 +1,13 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
     return (
         <div className="hero min-h-screen">
+            {/* Helmet */}
+            <Helmet>
+                <title>Error Page | Winter Clothing Donation</title>
+            </Helmet>
             <div className="hero-content text-center">
                 <div className="max-w-md space-y-5">
                     <h1 className="text-5xl font-bold">404</h1>
