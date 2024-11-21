@@ -77,7 +77,7 @@ const DonationDetails = () => {
                                 Quantity of Items
                             </label>
                             <input
-                                type="number"
+                                type="text"
                                 id="quantity"
                                 name="quantity"
                                 className="input input-bordered w-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#660066]"
