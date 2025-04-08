@@ -46,7 +46,7 @@ const Navbar = () => {
     );
 
     return (
-        <div className="p-2 md:py-3 bg-gray-300">
+        <div className="bg-gray-300">
             <div className="container mx-auto">
                 <div className="navbar">
                     <div className="navbar-start">
